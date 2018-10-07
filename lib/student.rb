@@ -20,7 +20,7 @@ class Student
         grade TEXT
       )
     SQL
-    DB[:conn].execute(sql)
+    execute
   end
   
   def self.drop_table
