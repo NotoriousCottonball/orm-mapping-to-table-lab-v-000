@@ -20,7 +20,7 @@ class Student
         grade TEXT
       )
     SQL
-    execute
+    self.execute
   end
   
   def self.drop_table
