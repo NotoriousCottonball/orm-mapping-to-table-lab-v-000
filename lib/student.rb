@@ -2,7 +2,7 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id 
   
-  def self.execute 
+  def self.execute(sql) 
     DB[:conn].execute(sql)
   end
     
@@ -20,7 +20,7 @@ class Student
         grade TEXT
       )
     SQL
-    self.execute
+    self.execute(sql)
   end
   
   def self.drop_table
