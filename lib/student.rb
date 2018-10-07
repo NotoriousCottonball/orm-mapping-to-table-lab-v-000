@@ -2,6 +2,11 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id 
   
+  def execute 
+    DB[:conn].execute(sql)
+  end
+    
+  
   def initialize(name, grade)
     @name = name 
     @grade = grade 
