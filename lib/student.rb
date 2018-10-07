@@ -1,10 +1,6 @@
 class Student
   attr_accessor :name, :grade
   attr_reader :id 
-  
-  def execute(sql) 
-    DB[:conn].execute(sql)
-  end
     
   
   def initialize(name, grade)
@@ -20,7 +16,7 @@ class Student
         grade TEXT
       )
     SQL
-    execute(sql)
+    DB[:conn].execute(sql)
   end
   
   def self.drop_table
